@@ -4,6 +4,7 @@ class CreateShips < ActiveRecord::Migration
       t.integer :user_id
       t.text    :location,       array: true, default: []
       t.text    :shots_received, array: true, default: []
+      t.integer :size
 
       t.timestamps null: false
     end
