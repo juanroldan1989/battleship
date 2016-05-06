@@ -1,15 +1,30 @@
 <div class="row">
   <h2>This is your table <%= @user.name %></h2>
 
+  <br/>
+  <br/>
+  <br/>
+
   <div class="large-6 columns">
+    <h4>Enemy Shots & My Ships</h4>
     <table>
-      <% letters.each do |letter| %>
+      <tbody>
         <tr>
+          <th></th>
           <% numbers.each do |number| %>
-            <td class="primary callout"></td>
+            <th><%= number %></th>
           <% end %>
         </tr>
-      <% end %>
+        <% letters.each do |letter| %>
+          <tr>
+            <td><%= letter %></td>
+            <% numbers.each do |number| %>
+              <% location = "#{letter}#{number}" %>
+              <td class="<%= set_cube_class(location) %>"></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
     </table>
   </div>
 
