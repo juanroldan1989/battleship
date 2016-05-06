@@ -30,7 +30,7 @@ module GamesHelper
       if shot.hit?
         "alert callout"
       else
-        "callout"
+        "water callout"
       end
     else
       "primary callout"

@@ -1,0 +1,15 @@
+.alert.callout {
+  background-color: #FF0000;
+}
+
+.primary.callout {
+  background-color: #FFFFFF;
+}
+
+.secondary.callout {
+  background-color: #808080;
+}
+
+.water.callout {
+  background-color: #def0fc;
+}

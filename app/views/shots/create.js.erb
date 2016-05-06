@@ -1,7 +1,8 @@
 <% if @shot.hit? %>
   // shot hit opponent's ship !
+  $("#button_<%= @shot.location %>").removeClass("primary");
   $("#button_<%= @shot.location %>").addClass("alert");
 <% else %>
   // shot hit water
-  $("#button_<%= @shot.location %>").removeClass("primary");
+  $("#button_<%= @shot.location %>").addClass("water");
 <% end %>
