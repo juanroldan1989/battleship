@@ -43,7 +43,11 @@
     </table>
 
     <% my_ships.each do |ship| %>
-      <b><%= ship.title%></b> located in <%= ship.location %>
+      <div>
+        <b><%= ship.title%></b> located in <%= ship.location %>
+        <%#= text_field_tag "location", ship.location.join(","), class: "ship-location" %>
+        <%#= link_to "Update location", "#", "data-behavior" => "set-ship-location", "data-ship-id" => ship.id, "data-user-id" => @user.id %>
+      </div>
       <br/>
     <% end %>
   </div>
