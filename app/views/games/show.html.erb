@@ -14,14 +14,26 @@
   </div>
 
   <div class="large-6 columns">
+    <h4>My Shots</h4>
     <table>
-      <% letters.each do |letter| %>
+      <tbody>
         <tr>
+          <th></th>
           <% numbers.each do |number| %>
-            <td class="primary callout"></td>
+            <th><%= number %></th>
           <% end %>
         </tr>
-      <% end %>
+        <% letters.each do |letter| %>
+          <tr>
+            <td><%= letter %></td>
+            <% numbers.each do |number| %>
+              <td>
+                <%= link_to "", shots_path(user_id: @user.id, location: "#{letter}#{number}"), method: :post, remote: true, class: set_shot_button_class("#{letter}#{number}"), id: "button_#{letter}#{number}" %>
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
     </table>
   </div>
 
