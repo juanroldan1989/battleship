@@ -26,6 +26,11 @@
         <% end %>
       </tbody>
     </table>
+
+    <% my_ships.each do |ship| %>
+      <b><%= ship.title%></b> located in <%= ship.location %>
+      <br/>
+    <% end %>
   </div>
 
   <div class="large-6 columns">
