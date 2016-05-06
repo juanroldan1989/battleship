@@ -22,3 +22,8 @@ https://en.wikipedia.org/wiki/Battleship_%28game%29
 - Access the homepage and choose a player: https://battleship-demo.herokuapp.com/
 - Player 1: https://battleship-demo.herokuapp.com/games/1
 - Player 2: https://battleship-demo.herokuapp.com/games/2
+
+### Additional commands:
+
+- Restart database: `heroku pg:reset DATABASE_URL`
+- Populate initial data: `heroku run rake db:migrate db:seed`
